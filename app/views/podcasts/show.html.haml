@@ -1,0 +1,30 @@
+- title "Podcast"
+
+%p
+  %strong Title:
+  = @podcast.title
+%p
+  %strong Description:
+  = @podcast.description
+%p
+  %strong Link:
+  = @podcast.link
+%p
+  %strong Screenshot:
+  = @podcast.screenshot
+%p
+  %strong Size:
+  = @podcast.size
+%p
+  %strong Duration:
+  = @podcast.duration
+%p
+  %strong Date:
+  = @podcast.date
+
+%p
+  = link_to "Edit", edit_podcast_path(@podcast)
+  |
+  = link_to "Destroy", @podcast, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", podcasts_path

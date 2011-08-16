@@ -1,0 +1,17 @@
+one:
+  title: MyString
+  description: MyText
+  link: MyString
+  screenshot: MyString
+  size: 1
+  duration: MyString
+  date: 2011-08-09
+
+two:
+  title: MyString
+  description: MyText
+  link: MyString
+  screenshot: MyString
+  size: 1
+  duration: MyString
+  date: 2011-08-09

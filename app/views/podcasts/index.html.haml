@@ -1,0 +1,25 @@
+- title "Podcasts"
+
+%table
+  %tr
+    %th Title
+    %th Description
+    %th Link
+    %th Screenshot
+    %th Size
+    %th Duration
+    %th Date
+  - for podcast in @podcasts
+    %tr
+      %td= podcast.title
+      %td= podcast.description
+      %td= podcast.link
+      %td= podcast.screenshot
+      %td= podcast.size
+      %td= podcast.duration
+      %td= podcast.date
+      %td= link_to 'Show', podcast
+      %td= link_to 'Edit', edit_podcast_path(podcast)
+      %td= link_to 'Destroy', podcast, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Podcast", new_podcast_path

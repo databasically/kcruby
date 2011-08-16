@@ -1,0 +1,41 @@
+- title "Users"
+
+%table
+  %tr
+    %th Name
+    %th Email
+    %th About
+    %th Links
+    %th Avatar
+    %th Token
+    %th User since
+    %th Github user
+    %th Twitter user
+    %th Login count
+    %th Ruby since
+    %th Neighborhood
+    %th Available
+    %th Show email
+    %th Email reminders
+  - for user in @users
+    %tr
+      %td= user.name
+      %td= user.email
+      %td= user.about
+      %td= user.links
+      %td= user.avatar
+      %td= user.token
+      %td= user.user_since
+      %td= user.github_user_id
+      %td= user.twitter_user_id
+      %td= user.login_count
+      %td= user.ruby_since
+      %td= user.neighborhood
+      %td= user.available
+      %td= user.show_email
+      %td= user.email_reminders
+      %td= link_to 'Show', user
+      %td= link_to 'Edit', edit_user_path(user)
+      %td= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New User", new_user_path

@@ -1,0 +1,33 @@
+one:
+  name: MyString
+  email: MyString
+  about: MyText
+  links: MyText
+  avatar: MyString
+  token: MyString
+  user_since: 2011-08-09
+  github_user_id: MyString
+  twitter_user_id: MyString
+  login_count: 1
+  ruby_since: 2011-08-09
+  neighborhood: MyString
+  available: false
+  show_email: false
+  email_reminders: false
+
+two:
+  name: MyString
+  email: MyString
+  about: MyText
+  links: MyText
+  avatar: MyString
+  token: MyString
+  user_since: 2011-08-09
+  github_user_id: MyString
+  twitter_user_id: MyString
+  login_count: 1
+  ruby_since: 2011-08-09
+  neighborhood: MyString
+  available: false
+  show_email: false
+  email_reminders: false

@@ -1,0 +1,24 @@
+= form_for @event do |f|
+  = f.error_messages
+  %p
+    = f.label :title
+    %br
+    = f.text_field :title
+  %p
+    = f.label :date
+    %br
+    = f.date_select :date
+  %p
+    = f.label :time
+    %br
+    = f.time_select :time
+  %p
+    = f.label :location
+    %br
+    = f.text_area :location
+  %p
+    = f.label :descrition
+    %br
+    = f.text_area :descrition
+  %p
+    = f.submit

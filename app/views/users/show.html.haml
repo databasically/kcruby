@@ -1,0 +1,54 @@
+- title "User"
+
+%p
+  %strong Name:
+  = @user.name
+%p
+  %strong Email:
+  = @user.email
+%p
+  %strong About:
+  = @user.about
+%p
+  %strong Links:
+  = @user.links
+%p
+  %strong Avatar:
+  = @user.avatar
+%p
+  %strong Token:
+  = @user.token
+%p
+  %strong User Since:
+  = @user.user_since
+%p
+  %strong Github User:
+  = @user.github_user_id
+%p
+  %strong Twitter User:
+  = @user.twitter_user_id
+%p
+  %strong Login Count:
+  = @user.login_count
+%p
+  %strong Ruby Since:
+  = @user.ruby_since
+%p
+  %strong Neighborhood:
+  = @user.neighborhood
+%p
+  %strong Available:
+  = @user.available
+%p
+  %strong Show Email:
+  = @user.show_email
+%p
+  %strong Email Reminders:
+  = @user.email_reminders
+
+%p
+  = link_to "Edit", edit_user_path(@user)
+  |
+  = link_to "Destroy", @user, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", users_path

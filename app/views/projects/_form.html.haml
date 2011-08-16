@@ -1,0 +1,24 @@
+= form_for @project do |f|
+  = f.error_messages
+  %p
+    = f.label :title
+    %br
+    = f.text_field :title
+  %p
+    = f.label :description
+    %br
+    = f.text_area :description
+  %p
+    = f.label :user_id
+    %br
+    = f.text_field :user_id
+  %p
+    = f.label :timestamp
+    %br
+    = f.date_select :timestamp
+  %p
+    = f.label :created
+    %br
+    = f.date_select :created
+  %p
+    = f.submit
