@@ -4,58 +4,72 @@
   margin: 0 auto; }
   #header h1 {
     float: left;
-    margin: 40px 0 0 -50px;
+    margin: 40px 0 0 0px;
     text-indent: -9999px; }
     #header h1 a {
       display: block;
       width: 216px;
-      height: 255px;
-      background: url(/images/application/kc-sc.png) no-repeat; }
-  #header h2 {
+      height: 300px;
+      background: url(/images/application/kc-ruby.png) no-repeat; }
+  #header h3 {
+    float: right;
     margin: 0px 0 0 0px;
     text-indent: -9999px; }
-    #header h2 a {
+    #header h3 a {
       display: block;
       width: 86px;
       height: 86px;
       background: url(/images/application/kc-pc.png) no-repeat; }
+  #header #event {
+    position: absolute;
+    top: 30px;
+    margin-left: 250px; }
   #header #podcast {
-    postion: relative;
+    postion: absolute;
     top: 0px;
-    margin-left: 500px; }
-  #header #nav {
-    position: relative;
-    top: 100px;
-    margin-left: 125px;
-    padding: 11px 0;
-    border-bottom: 1px dashed #b1ad9b; }
-    #header #nav ul {
-      padding: 5px 0;
-      list-style-type: none;
-      text-align: center;
-      margin: 0; }
-      #header #nav ul li {
-        padding: 6px 15px;
-        margin: 0 7.5px;
-        display: -moz-inline-box;
-        -moz-box-orient: vertical;
-        display: inline-block;
-        vertical-align: middle;
-        *vertical-align: auto;
-        font: 14px Georgia, Garamond, Times, "Times New Roman", serif;
-        border: 1px solid #cacaca;
-        border-bottom: 3px solid #000999;
-        *display: inline; }
-        #header #nav ul li a {
-          text-decoration: none;
-          color: #3f0e0d; }
-        #header #nav ul li a:hover {
-          color: #0000cc; }
+    margin-right: 20px;
+    margin-top: 20px; }
+
+#nav {
+  position: relative;
+  top: 150px;
+  margin-left: 150px;
+  padding: 11px 0;
+  border-bottom: 1px dashed #b1ad9b; }
+  #nav ul {
+    padding: 5px 0;
+    list-style-type: none;
+    text-align: center;
+    margin-left: 40px; }
+    #nav ul li {
+      padding: 6px 15px;
+      margin: 0 7.5px;
+      display: -moz-inline-box;
+      -moz-box-orient: vertical;
+      display: inline-block;
+      vertical-align: middle;
+      *vertical-align: auto;
+      font: 14px Georgia, Garamond, Times, "Times New Roman", serif;
+      border: 1px solid #cacaca;
+      border-bottom: 3px solid #000999;
+      *display: inline; }
+      #nav ul li a {
+        text-decoration: none;
+        color: #3f0e0d; }
+      #nav ul li a:hover {
+        color: #0000cc; }
+
+#footer {
+  height: 10px;
+  width: 795px;
+  margin: 0 auto; }
 
 body {
   background-color: white;
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px; }
+  body #page {
+    margin-left: 300px; }
 
 a {
   color: blue; }
