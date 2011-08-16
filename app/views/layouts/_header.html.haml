@@ -5,11 +5,15 @@
     %table
       %tr
         %td
-          #event_title= "This is the Title"
+          %strong
+            #event_title= "#{next_event.title}"
       %tr
-        %td some place
+        %td
+          #event_place= "#{next_event.location}"
       %tr
-        %td some time
+        %td
+          #event_time= "#{next_event.time.strftime("%I:%M %p")}"
+          #event_date= "#{next_event.date.strftime("%A %b %d, %Y")}"
   #podcast
     %h3
       %a{:href => "/podcasts"} Latest Podcast
