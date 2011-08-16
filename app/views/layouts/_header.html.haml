@@ -2,18 +2,19 @@
   %h1
     %a{:href => "/"} KC Ruby
   #event
-    %table
+    %table{:onclick => "/events"}
       %tr
         %td
-          %strong
+          %h2
             #event_title= "#{next_event.title}"
       %tr
         %td
           #event_place= "#{next_event.location}"
       %tr
         %td
-          #event_time= "#{next_event.time.strftime("%I:%M %p")}"
           #event_date= "#{next_event.date.strftime("%A %b %d, %Y")}"
+          #event_time= "@ #{next_event.time.strftime("%I:%M %p")}"
+
   #podcast
     %h3
       %a{:href => "/podcasts"} Latest Podcast
