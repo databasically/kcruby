@@ -1,19 +1,31 @@
-- @title =  "Events"
+- title "Events"
 
 %table
   %tr
-    %th Title
-    %th Date
+    %th Name
     %th Time
-    %th Location
-    %th Descrition
+    %th Venue name
+    %th Description
+    %th Venue address1
+    %th Venue address2
+    %th Venue city
+    %th Venue state
+    %th Venue zip
+    %th Venue map
+    %th Meet up
   - for event in @events
     %tr
-      %td= event.title
-      %td= event.date
+      %td= event.name
       %td= event.time
-      %td= event.location
-      %td= event.descrition
+      %td= event.venue_name
+      %td= event.description
+      %td= event.venue_address1
+      %td= event.venue_address2
+      %td= event.venue_city
+      %td= event.venue_state
+      %td= event.venue_zip
+      %td= event.venue_map
+      %td= event.meet_up_id
       %td= link_to 'Show', event
       %td= link_to 'Edit', edit_event_path(event)
       %td= link_to 'Destroy', event, :confirm => 'Are you sure?', :method => :delete

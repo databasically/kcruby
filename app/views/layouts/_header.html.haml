@@ -2,19 +2,20 @@
   %h1
     %a{:href => "/"} KC Ruby
   #event
-    %table{:onclick => "/events"}
+  
+    %table
       %tr
-        %td
+        %td{:align => "center"}
           %h2
-            #event_title= "#{next_event.title}"
+            #event_title= "#{Event.next.name}"
       %tr
-        %td
-          #event_place= "#{next_event.location}"
+        %td{:align => "center"}
+          #event_place= "#{Event.next.venue_name}"
       %tr
-        %td
-          #event_date= "#{next_event.date.strftime("%A %b %d, %Y")}"
-          #event_time= "@ #{next_event.time.strftime("%I:%M %p")}"
-
+        %td{:align => "center"}
+          #event_date= "#{Event.next.time.strftime("%A %b %d, %Y")}"
+          #event_time= "@ #{Event.next.time.strftime("%I:%M %p")}"
+  
   #podcast
     %h3
       %a{:href => "/podcasts"} Latest Podcast

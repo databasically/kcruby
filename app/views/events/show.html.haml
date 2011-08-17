@@ -1,20 +1,38 @@
-- @title =  "Event"
+- title "Event"
 
 %p
-  %strong Title:
-  = @event.title
-%p
-  %strong Date:
-  = @event.date
+  %strong Name:
+  = @event.name
 %p
   %strong Time:
   = @event.time
 %p
-  %strong Location:
-  = @event.location
+  %strong Venue Name:
+  = @event.venue_name
 %p
-  %strong Descrition:
-  = @event.descrition
+  %strong Description:
+  = @event.description
+%p
+  %strong Venue Address1:
+  = @event.venue_address1
+%p
+  %strong Venue Address2:
+  = @event.venue_address2
+%p
+  %strong Venue City:
+  = @event.venue_city
+%p
+  %strong Venue State:
+  = @event.venue_state
+%p
+  %strong Venue Zip:
+  = @event.venue_zip
+%p
+  %strong Venue Map:
+  = @event.venue_map
+%p
+  %strong Meet Up:
+  = @event.meet_up_id
 
 %p
   = link_to "Edit", edit_event_path(@event)
