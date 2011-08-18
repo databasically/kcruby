@@ -1,7 +1,12 @@
 #header {
   height: 250px;
-  width: 795px;
+  width: 960px;
   margin: 0 auto; }
+  #header a {
+    text-decoration: none;
+    color: #3f0e0d; }
+  #header a:hover {
+    color: #0000cc; }
   #header h1 {
     float: left;
     margin: 40px 0 0 0px;
@@ -26,15 +31,19 @@
   #header #event {
     position: absolute;
     top: 30px;
-    margin-left: 250px; }
+    margin: 0px 80px 0px 250px; }
     #header #event table {
       border: 1px solid #cacaca;
-      padding: 20px; }
+      border-bottom: 3px solid #000999;
+      padding: 5px 5px 20px 5px;
+      width: 500px; }
+      #header #event table h4 {
+        font-size: 75%;
+        margin: 0 0 0 0; }
   #header #podcast {
     postion: absolute;
     top: 0px;
-    margin-right: 20px;
-    margin-top: 20px; }
+    margin: 0 20px 0 20px; }
 
 #nav {
   position: relative;
@@ -71,11 +80,12 @@
   margin: 0 auto; }
 
 body {
+  width: 900px;
   background-color: white;
   font-family: Courier, Lucida Console, Arial, monospace;
   font-size: 100%; }
   body #page {
-    margin-left: 150px; }
+    margin: 0px; }
 
 a {
   color: blue; }
@@ -90,12 +100,9 @@ a {
   overflow: hidden; }
 
 #container {
-  width: 75%;
-  margin: 0 auto;
+  margin: 20 auto;
   background: white;
-  padding: 20px 40px;
-  border: solid 1px black;
-  margin-top: 20px; }
+  padding: 20px 40px; }
 
 #flash_notice,
 #flash_error,

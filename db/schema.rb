@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(:version => 20110817161334) do
     t.string   "venue_state"
     t.string   "venue_zip"
     t.string   "venue_map"
-    t.string   "meet_up_id"
+    t.string   "event_url"
   end
 
   create_table "podcasts", :force => true do |t|

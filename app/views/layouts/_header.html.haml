@@ -1,21 +1,26 @@
-#header  
+#header 
   %h1
     %a{:href => "/"} KC Ruby
   #event
-  
+    - @next = Event.next
     %table
+      %tr
+        %td{:align => "left"}
+          %h4
+            Our next event:
       %tr
         %td{:align => "center"}
           %h2
-            #event_title= "#{Event.next.name}"
+            %a{:href => "#{@next.event_url}"}
+              #event_title= "#{@next.name}"
       %tr
         %td{:align => "center"}
-          #event_place= "#{Event.next.venue_name}"
+          %a{:href => "#{@next.venue_map}"}
+            #event_place= "#{@next.venue_name}"
       %tr
         %td{:align => "center"}
-          #event_date= "#{Event.next.time.strftime("%A %b %d, %Y")}"
-          #event_time= "@ #{Event.next.time.strftime("%I:%M %p")}"
-  
+          #event_datetime= "#{@next.time.strftime("%A %b %d, %Y")} @ #{@next.time.strftime("%I:%M %p")}"
+        
   #podcast
     %h3
       %a{:href => "/podcasts"} Latest Podcast

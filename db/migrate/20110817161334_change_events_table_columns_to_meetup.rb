@@ -11,7 +11,7 @@ class ChangeEventsTableColumnsToMeetup < ActiveRecord::Migration
     add_column    :events, :venue_state, :string   
     add_column    :events, :venue_zip, :string     
     add_column    :events, :venue_map, :string
-    add_column    :events, :meet_up_id, :string
+    add_column    :events, :event_url, :string
          
   end
 
@@ -27,6 +27,6 @@ class ChangeEventsTableColumnsToMeetup < ActiveRecord::Migration
     remove_column :events, :venue_state, :string
     remove_column :events, :venue_zip, :string
     remove_column :events, :venue_map, :string
-    remove_column :events, :meet_up_id, :string   
+    remove_column :events, :event_url, :string   
   end
 end
