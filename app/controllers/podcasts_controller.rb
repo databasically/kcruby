@@ -1,7 +1,6 @@
 class PodcastsController < ApplicationController
-  
   def index
-    @podcasts = Podcast.all
+    @podcasts = Podcast.public.desc
   end
 
   def show

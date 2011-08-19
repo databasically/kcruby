@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110817161334) do
+ActiveRecord::Schema.define(:version => 20110819150910) do
 
   create_table "events", :force => true do |t|
     t.string   "name"
@@ -31,13 +31,17 @@ ActiveRecord::Schema.define(:version => 20110817161334) do
   create_table "podcasts", :force => true do |t|
     t.string   "title"
     t.text     "description"
-    t.string   "link"
-    t.string   "screenshot"
+    t.string   "video_url"
+    t.string   "thumbnail_medium"
     t.integer  "size"
     t.string   "duration"
-    t.date     "date"
+    t.date     "upload_date"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "thumbnail_large"
+    t.string   "width"
+    t.string   "height"
+    t.boolean  "private_video"
   end
 
   create_table "projects", :force => true do |t|

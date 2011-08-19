@@ -1,4 +1,4 @@
-- @title =  "Podcast"
+- title "Podcast"
 
 %p
   %strong Title:
@@ -7,11 +7,11 @@
   %strong Description:
   = @podcast.description
 %p
-  %strong Link:
-  = @podcast.link
+  %strong Video Url:
+  = @podcast.video_url
 %p
-  %strong Screenshot:
-  = @podcast.screenshot
+  %strong Thumbnail Medium:
+  = @podcast.thumbnail_medium
 %p
   %strong Size:
   = @podcast.size
@@ -19,12 +19,21 @@
   %strong Duration:
   = @podcast.duration
 %p
-  %strong Date:
-  = @podcast.date
+  %strong Upload Date:
+  = @podcast.upload_date
+%p
+  %strong Thumbnail Large:
+  = @podcast.thumbnail_large
+%p
+  %strong Width:
+  = @podcast.width
+%p
+  %strong Height:
+  = @podcast.height
+%p
+  %strong Private Video:
+  = @podcast.private_video
 
 %p
-  = link_to "Edit", edit_podcast_path(@podcast)
-  |
-  = link_to "Destroy", @podcast, :confirm => 'Are you sure?', :method => :delete
-  |
+
   = link_to "View All", podcasts_path

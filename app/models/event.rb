@@ -1,5 +1,5 @@
 class Event < ActiveRecord::Base
-  attr_accessible :name, :event_url, :description, :time, :venue_name, :venue_address1, :venue_address2, :venue_city, :venue_city, :venue_state, :venue_zip, :venue_map
+  attr_accessible :name, :event_url, :description, :time, :venue_name, :venue_address1, :venue_address2, :venue_city, :venue_state, :venue_zip, :venue_map
   
   def self.next
     Event.first(:conditions => ["time >= ?",Time.now], :order => "time") || Event.last(:order => "time")
@@ -15,8 +15,6 @@ class Event < ActiveRecord::Base
         :time           => ev["time"],
         :venue_name     => ev["venue_name"],
         :description    => ev["description"],
-        :created_at     => ev["created_at"],
-        :updated_at     => ev["updated_at"],
         :venue_address1 => ev["venue_address1"],
         :venue_address2 => ev["venue_address2"],
         :venue_city     => ev["venue_city"],

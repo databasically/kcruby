@@ -2,11 +2,6 @@
   height: 250px;
   width: 960px;
   margin: 0 auto; }
-  #header a {
-    text-decoration: none;
-    color: #3f0e0d; }
-  #header a:hover {
-    color: #0000cc; }
   #header h1 {
     float: left;
     margin: 40px 0 0 0px;
@@ -18,7 +13,8 @@
       background: url(/images/application/kc-ruby.png) no-repeat; }
   #header h2 {
     font-size: 150%;
-    margin: 0px 0 0 0px; }
+    margin: 0px 0 0 0px;
+    text-decoration: underline; }
   #header h3 {
     float: right;
     margin: 0px 0 0 0px;
@@ -32,6 +28,8 @@
     position: absolute;
     top: 30px;
     margin: 0px 80px 0px 250px; }
+    #header #event a {
+      text_decoration: underline; }
     #header #event table {
       border: 1px solid #cacaca;
       border-bottom: 3px solid #000999;
@@ -46,16 +44,17 @@
     margin: 0 20px 0 20px; }
 
 #nav {
-  position: relative;
+  position: absolute;
   top: 150px;
-  margin-left: 150px;
+  width: 800px;
+  margin: 20px 0px 0px 160px;
   padding: 11px 0;
   border-bottom: 1px dashed #b1ad9b; }
   #nav ul {
     padding: 5px 0;
     list-style-type: none;
     text-align: center;
-    margin-left: 40px; }
+    margin-left: -45px; }
     #nav ul li {
       padding: 6px 15px;
       margin: 0 7.5px;
@@ -64,7 +63,7 @@
       display: inline-block;
       vertical-align: middle;
       *vertical-align: auto;
-      font: 14px Georgia, Garamond, Times, "Times New Roman", serif;
+      font: 14px Courier, Monaco, Lucida Console, monospace;
       border: 1px solid #cacaca;
       border-bottom: 3px solid #000999;
       *display: inline; }
@@ -77,22 +76,41 @@
 #footer {
   height: 10px;
   width: 795px;
-  margin: 0 auto; }
+  margin: 0 0 0 150px; }
 
 body {
   width: 900px;
   background-color: white;
-  font-family: Courier, Lucida Console, Arial, monospace;
+  font-family: Monaco, Lucida Console, Courier, monospace;
   font-size: 100%; }
   body #page {
-    margin: 0px; }
+    margin: 90px 0px 50px 100px; }
+
+table {
+  margin: 0px 0 0px 0;
+  padding: 0; }
+  table a {
+    color: #3f0e0d; }
+  table a:hover {
+    color: #0000cc; }
+  table h4 {
+    text-align: center;
+    padding: 0px 0px 0px 0px;
+    margin: 0; }
+  table h5 {
+    text-align: left;
+    padding: 10px 0px 0px 20px;
+    margin: 0; }
 
 a {
-  color: blue; }
-  a img {
-    border: none; }
-  a #hover {
-    color: red; }
+  color: #3f0e0d; }
+
+a:hover {
+  color: #0000cc; }
+
+iframe {
+  margin: 0;
+  buffer: 0; }
 
 .clear {
   clear: both;
@@ -100,9 +118,9 @@ a {
   overflow: hidden; }
 
 #container {
-  margin: 20 auto;
+  margin: auto;
   background: white;
-  padding: 20px 40px; }
+  padding: 20px 0 40px 0; }
 
 #flash_notice,
 #flash_error,
