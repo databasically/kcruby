@@ -1,4 +1,4 @@
-#header 
+#header
   %h1
     %a{:href => "/"} KC Ruby
   #event
@@ -20,9 +20,8 @@
       %tr
         %td{:align => "center"}
           #event_datetime= "#{@next.time.strftime("%A %b %d, %Y")} @ #{@next.time.strftime("%I:%M %p")}"
-        
-  #podcast
-    %h3
-      %a{:href => "#{podcasts_url}"} Latest Podcast
+    
+  %h3
+    %a{:href => "#{podcasts_url}"} Latest Podcast
   = render :partial => "layouts/navbar"
       

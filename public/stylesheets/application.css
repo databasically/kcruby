@@ -13,11 +13,11 @@
       background: url(/images/application/kc-ruby.png) no-repeat; }
   #header h2 {
     font-size: 150%;
-    margin: 0px 0 0 0px;
+    margin: 0px 0px 0px 0px;
     text-decoration: underline; }
   #header h3 {
     float: right;
-    margin: 0px 0 0 0px;
+    margin: 30px 0px 0px 0px;
     text-indent: -9999px; }
     #header h3 a {
       display: block;
@@ -38,10 +38,6 @@
       #header #event table h4 {
         font-size: 75%;
         margin: 0 0 0 0; }
-  #header #podcast {
-    postion: absolute;
-    top: 0px;
-    margin: 0 20px 0 20px; }
 
 #nav {
   position: absolute;
@@ -74,21 +70,32 @@
         color: #0000cc; }
 
 #footer {
-  height: 10px;
+  align: center;
+  height: 15px;
   width: 795px;
-  margin: 0 0 0 150px; }
+  margin: 0 0 0 150px;
+  border-top: 1px dashed #b1ad9b; }
+
+#podcast {
+  margin: 10px 0px 0px 0px;
+  padding: 10px 0px 0px 0px;
+  border-top: 1px dashed #b1ad9b; }
 
 body {
-  width: 900px;
+  border-top: 5px solid #000999;
+  margin: 0px 0px 40px 0px;
+  padding: 0px 0px 0px 40px;
+  width: 100%;
   background-color: white;
-  font-family: Monaco, Lucida Console, Courier, monospace;
+  font-family: Monaco, Courier, Lucida Console, Courier, monospace;
   font-size: 100%; }
   body #page {
-    margin: 90px 0px 50px 100px; }
+    margin: 90px 0px 50px 50px;
+    width: 900px; }
 
 table {
-  margin: 0px 0 0px 0;
-  padding: 0; }
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px; }
   table a {
     color: #3f0e0d; }
   table a:hover {
