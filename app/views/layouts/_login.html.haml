@@ -1,0 +1,8 @@
+#login 
+  %p
+    %h5
+      - if current_user
+        ="Welcome #{current_user.name}"
+        =link_to "logout", logout_path
+      - else
+        =link_to "login", login_path

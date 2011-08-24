@@ -4,7 +4,7 @@
   margin: 0 auto; }
   #header h1 {
     float: left;
-    margin: 40px 0 0 0px;
+    margin: 40px 0px 0px 0px;
     text-indent: -9999px; }
     #header h1 a {
       display: block;
@@ -17,27 +17,47 @@
     text-decoration: underline; }
   #header h3 {
     float: right;
-    margin: 30px 0px 0px 0px;
+    margin: 30px -300px 0px 0px;
     text-indent: -9999px; }
     #header h3 a {
       display: block;
       width: 86px;
       height: 86px;
       background: url(/images/application/kc-pc.png) no-repeat; }
+  #header h5 {
+    float: right;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px; }
   #header #event {
     position: absolute;
-    top: 30px;
-    margin: 0px 80px 0px 250px; }
+    top: 50px;
+    margin: 0px 60px 0px 250px;
+    color: white; }
+    #header #event h1 {
+      margin: 0 0 0 0;
+      color: white; }
+    #header #event h2 {
+      margin: 0 0 0 0;
+      color: white; }
+    #header #event h3 {
+      margin: 0 0 0 0;
+      color: white; }
+    #header #event h4 {
+      margin: 0 0 0 0;
+      color: white; }
+    #header #event h5 {
+      font-size: 75%;
+      margin: 0 0 0 0;
+      color: white; }
     #header #event a {
-      text_decoration: underline; }
+      text_decoration: underline;
+      margin: 0 0 0 0;
+      color: white; }
     #header #event table {
-      border: 1px solid #cacaca;
-      border-bottom: 3px solid #000999;
-      padding: 5px 5px 20px 5px;
-      width: 500px; }
-      #header #event table h4 {
-        font-size: 75%;
-        margin: 0 0 0 0; }
+      border: 3px solid black;
+      padding: 5px 5px 10px 5px;
+      width: 550px;
+      background-color: #000999; }
 
 #nav {
   position: absolute;
@@ -73,13 +93,19 @@
   align: center;
   height: 15px;
   width: 795px;
-  margin: 0 0 0 150px;
+  margin: 0px 0px 0px 150px;
   border-top: 1px dashed #b1ad9b; }
 
 #podcast {
   margin: 10px 0px 0px 0px;
   padding: 10px 0px 0px 0px;
   border-top: 1px dashed #b1ad9b; }
+
+#login {
+  align: right;
+  height: 0px;
+  width: 850px;
+  margin: 0px 0px 0px 0px; }
 
 body {
   border-top: 5px solid #000999;
