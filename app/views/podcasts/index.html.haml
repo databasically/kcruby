@@ -1,25 +1,4 @@
 - title "Podcasts"
 
-#page
-  #body
-    %table
-      - for podcast in @podcasts
-        %tr
-          %td
-            #podcast
-        %tr
-          %td
-            %table
-              %td
-                %iframe{:src => "http://player.vimeo.com/video/#{podcast.id}?title=0&byline=0&portrait=0", :width => "320", :height => "180", :frameborder => "0", :alt => "#{podcast.title}"}
-              %td{:valign => "top"}
-                %table
-                  %tr
-                    %td
-                      %h4= link_to "#{podcast.title}", "#{podcast.video_url}"
-                  %tr
-                    %td
-                      %h5= "Duration: #{print_duration(podcast.duration)}"
-                  %tr
-                    %td
-                      %h5= "Upload Date: #{podcast.upload_date.strftime("%b %d, %Y")}"
+#body
+  =render :partial => "layouts/podcast"

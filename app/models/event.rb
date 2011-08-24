@@ -5,7 +5,7 @@ class Event < ActiveRecord::Base
     Event.first(:conditions => ["time >= ?",Time.now], :order => "time") || Event.last(:order => "time")
   end
   
-  def self.meetup_events
+  def self.get_meetup
     u = URI.parse("http://api.meetup.com/events.json/?group_urlname=kcruby&amp;key=38a2a70114e565b3c155d919384a12")
     response = Net::HTTP.get(u)
     JSON.parse(response)["results"].each do |ev|

@@ -4,27 +4,4 @@
   %tr
     %td Share ideas, code, and your love for Ruby. Show off your latest project, gems and plugins, or something you learned. Open to all skill levels… just show up and join the fun!
   %tr
-    %table
-      %tr
-        %th
-        %th
-        %th
-        %th
-        %th
-      - for podcast in @podcasts
-        #podcast
-          %tr
-            %td
-              %iframe{:src => "http://player.vimeo.com/video/#{podcast.id}?title=0&byline=0&portrait=0", :width => "480", :height => "270", :frameborder => "0"}
-            %td{:valign => "top"}
-              %table
-                %tr
-                  %td
-                    %h4= link_to "#{podcast.title}", "#{podcast.video_url}"
-                %tr
-                  %td
-                    %h5= "Duration: #{print_duration(podcast.duration)}"
-                %tr
-                  %td
-                    %h5= "Upload Date: #{podcast.upload_date.strftime("%b %d, %Y")}"
-  
+    =render :partial => "layouts/podcast"  
