@@ -4,7 +4,7 @@
       - if current_user
         %img{:src => "#{current_user.avatar}", :height => "40"}
         ="#{current_user.name}"
-        -# =link_to "edit", "#{@current_user.id}#edit"
+        =link_to "edit", "users/#{current_user.id}/edit"
         =link_to "logout", logout_path
       - else
         =link_to "login", login_path
