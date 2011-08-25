@@ -7,7 +7,6 @@ $primary_color: #FFFFFF
 @import "_login"
 
 body
-  //border-top: 5px solid #000999
   margin: 0px 0px 40px 0px
   padding: 0px 0px 0px 40px
   width: 100%
@@ -16,20 +15,32 @@ body
     family: Monaco, Courier, Lucida Console, Courier, monospace
     size: 100%
   #page
-    margin: 90px 0px 50px 50px
+    margin: 110px 0px 50px 50px
     width: 900px
+    .user
+      border: 1px solid green
+      iframe
+        float: right
 table
-  margin: 0px 0px 0px 0px
+  caption
+    border-bottom: 1px dashed #b1ad9b
+  width: 900px
+  margin: 10px 0px 0px 0px
   padding: 0px 0px 0px 0px
 
   a
     color: #3f0e0d
   a:hover
     color: #0000CC
+  h1,
+  h2,
+  h3,
   h4
     text-align: center
     padding: 0px 0px 0px 0px
-    margin: 0 
+    margin: 0
+  h3
+    text-align: left  
   h5
     text-align: left
     padding: 10px 0px 0px 20px

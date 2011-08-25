@@ -118,20 +118,32 @@ body {
   font-family: Monaco, Courier, Lucida Console, Courier, monospace;
   font-size: 100%; }
   body #page {
-    margin: 90px 0px 50px 50px;
+    margin: 110px 0px 50px 50px;
     width: 900px; }
+    body #page .user {
+      border: 1px solid green; }
+      body #page .user iframe {
+        float: right; }
 
 table {
-  margin: 0px 0px 0px 0px;
+  width: 900px;
+  margin: 10px 0px 0px 0px;
   padding: 0px 0px 0px 0px; }
+  table caption {
+    border-bottom: 1px dashed #b1ad9b; }
   table a {
     color: #3f0e0d; }
   table a:hover {
     color: #0000cc; }
+  table h1,
+  table h2,
+  table h3,
   table h4 {
     text-align: center;
     padding: 0px 0px 0px 0px;
     margin: 0; }
+  table h3 {
+    text-align: left; }
   table h5 {
     text-align: left;
     padding: 10px 0px 0px 20px;
