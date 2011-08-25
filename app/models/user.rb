@@ -3,11 +3,13 @@ class User < ActiveRecord::Base
 
 
   def self.find_or_create_by_auth(auth_data)
-    user = self.find_or_create_by_twitter_user_id(auth_data["twitter_user_id"])
+    user = self.find_or_create_by_id(auth_data["uid"])
     if user.name != auth_data["user_info"]["name"]
       user.name = auth_data["user_info"]["name"]
+      user.twitter_user_id = auth_data["user_info"]["nickname"]
+      user.avatar = auth_data["user_info"]["image"] 
       user.save
-    end   
+    end
     return user
   end
 

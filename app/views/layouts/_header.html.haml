@@ -14,16 +14,16 @@
         %td{:align => "center"}
           %h2
             %a{:href => "#{@next.event_url}"}
-              #event_title= "#{@next.name}"
+              = "#{@next.name}"
       %tr
         %td{:align => "center"}
           %a{:href => "#{@next.venue_map}"}
-            #event_place= "#{@next.venue_name}"
+            = "#{@next.venue_name}"
       %tr
         %td{:align => "center"}
-          #event_datetime= "#{@next.time.strftime("%A %b %d, %Y")} @ #{@next.time.strftime("%I:%M %p")}"
-    
-  %h3
-    %a{:href => "#{podcasts_url}"} Latest Podcast
+          = "#{@next.time.strftime("%A %b %d, %Y")} @ #{@next.time.strftime("%I:%M %p")}"
+
+  / %h3
+  /   %a{:href => "#{podcasts_url}"} Latest Podcast
   = render :partial => "layouts/navbar"
       

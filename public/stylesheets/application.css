@@ -30,7 +30,7 @@
     padding: 0px 0px 0px 0px; }
   #header #event {
     position: absolute;
-    top: 50px;
+    top: 70px;
     margin: 0px 60px 0px 250px;
     color: white; }
     #header #event h1 {
@@ -61,7 +61,7 @@
 
 #nav {
   position: absolute;
-  top: 150px;
+  top: 170px;
   width: 800px;
   margin: 20px 0px 0px 160px;
   padding: 11px 0;
@@ -98,17 +98,19 @@
 
 #podcast {
   margin: 10px 0px 0px 0px;
-  padding: 10px 0px 0px 0px;
-  border-top: 1px dashed #b1ad9b; }
+  padding: 10px 0px 0px 0px; }
 
 #login {
+  top: 4px;
   align: right;
-  height: 0px;
+  vertical-align: top;
+  height: 10px;
   width: 850px;
   margin: 0px 0px 0px 0px; }
+  #login h5 {
+    font-size: 75%; }
 
 body {
-  border-top: 5px solid #000999;
   margin: 0px 0px 40px 0px;
   padding: 0px 0px 0px 40px;
   width: 100%;
