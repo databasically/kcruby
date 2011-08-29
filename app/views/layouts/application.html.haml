@@ -14,12 +14,10 @@
     = csrf_meta_tag
 
   %body
+    = render :partial => "layouts/login"
     = render :partial => "layouts/header"
 
     #page
-      -if flash[:notice]
-        #flash_notice
-          = flash[:notice]
       = yield
       
     =render :partial => "layouts/footer"

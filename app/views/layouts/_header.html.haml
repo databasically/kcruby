@@ -1,26 +1,22 @@
 #header
-  #login
-    = render :partial => "layouts/login"
   %h1
     %a{:href => "/"} KC Ruby
-  #event
+  .event
     - @next = Event.next
-    %table
-      %tr
-        %td{:align => "left"}
-          %h4
-            Our next event:
-      %tr
-        %td{:align => "center"}
-          %h2
-            %a{:href => "#{@next.event_url}"}
-              = "#{@next.name}"
-      %tr
-        %td{:align => "center"}
+    #leadin
+      Our next event:
+    %br
+    %ul
+      #title
+        %li
+          %a{:href => "#{@next.event_url}"}
+            = "#{@next.name}"
+      #location
+        %li
           %a{:href => "#{@next.venue_map}"}
             = "#{@next.venue_name}"
-      %tr
-        %td{:align => "center"}
+      #date
+        %li
           = "#{@next.time.strftime("%A %b %d, %Y")} @ #{@next.time.strftime("%I:%M %p")}"
 
   / %h3

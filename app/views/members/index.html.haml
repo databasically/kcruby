@@ -5,7 +5,7 @@
     Members of the Kansas City Ruby Community
   - @members.each do |member|
     .member
-      %img{:src => "#{member.avatar}", :height => "40"}
+      %img{:src => "#{member.avatar}", :height => "40", :width => "40"}
       = member.name
       -if member.show_email
         =link_to("#{member.email}", "mailto:#{member.email}")

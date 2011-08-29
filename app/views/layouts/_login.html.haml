@@ -1,11 +1,12 @@
-#login 
-  %p
-    %h5
-      - if current_member
-        %img{:src => "#{current_member.avatar}", :height => "40"}
-        ="#{current_member.name}"
-        // =link_to "edit", "members/#{current_member.id}/edit"
-        =link_to "edit", edit_member_path(current_member)
-        =link_to "logout", logout_path
-      - else
-        =link_to "login", login_path
+#login
+  .log-bar
+    - if flash[:notice]
+      #flash_notice
+        = flash[:notice]
+  .info
+    - if current_member
+      %img{:src => "#{current_member.avatar}", :height => "36", :width=> "36"}
+      =link_to "#{current_member.name}", edit_member_path(current_member)
+      =link_to "logout", logout_path
+    - else
+      =link_to "login", login_path
