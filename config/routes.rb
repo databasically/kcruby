@@ -4,7 +4,7 @@ Kcruby::Application.routes.draw do
 
   resources :home
   
-  resources :users
+  resources :members
 
   resources :projects
 

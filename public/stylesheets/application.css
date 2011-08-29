@@ -120,9 +120,9 @@ body {
   body #page {
     margin: 110px 0px 50px 50px;
     width: 900px; }
-    body #page .user {
+    body #page .member {
       border: 1px solid green; }
-      body #page .user iframe {
+      body #page .member iframe {
         float: right; }
 
 table {
@@ -140,6 +140,7 @@ table {
   table h3,
   table h4 {
     text-align: center;
+    vertical-align: top;
     padding: 0px 0px 0px 0px;
     margin: 0; }
   table h3 {

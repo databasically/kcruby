@@ -1,0 +1,55 @@
+- @title =  "Member"
+
+%p
+  %strong Name:
+  = @member.name
+%p
+  %strong Email:
+  = @member.email
+%p
+  %strong About:
+  = @member.about
+%p
+  %strong Links:
+  = @member.links
+%p
+  %strong Avatar:
+  = @member.avatar
+%p
+  %strong Token:
+  = @member.token
+%p
+  %strong Member Since:
+  = @member.member_since
+%p
+  %strong Github User:
+  = @member.github_member_id
+%p
+  %strong Twitter User:
+  = @member.twitter_member_id
+%p
+  %iframe{:allowtransparency => "true", :frameborder => "0", :scrolling => "no", :src => "http://platform.twitter.com/widgets/follow_button.html?screen_name=#{@member.twitter_member_id}&show_count=false", :style => "width:300px; height:20px;"}
+  %strong Login Count:
+  = @member.login_count
+%p
+  %strong Ruby Since:
+  = @member.ruby_since
+%p
+  %strong Neighborhood:
+  = @member.neighborhood
+%p
+  %strong Available:
+  = @member.available
+%p
+  %strong Show Email:
+  = @member.show_email
+%p
+  %strong Email Reminders:
+  = @member.email_reminders
+
+%p
+  = link_to "Edit", edit_member_path(@member)
+  |
+  = link_to "Destroy", @member, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", members_path

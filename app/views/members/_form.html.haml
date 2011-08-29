@@ -1,22 +1,21 @@
-= form_for @user do |f|
+= form_for @member do |f|
   = f.error_messages
-  %caption
-    %h2
-      %img{:src => "#{@user.avatar}"}
-      = "#{@user.name} (#{@user.twitter_user_id})"
-
+  %h2
+    %img{:src => "#{@member.avatar}"}
+    = "#{@member.name} (#{@member.twitter_user_id})"
+  
   %p
     Email:
     = f.text_field :email
-    Show Email to Other Users?
+    Show Email to Other Members?
     = f.check_box :show_email
   %p
-    Github User Name:
-    = f.text_field :github_user_id
+    Github Member Name:
+    = f.text_field :twitter_user_id
     Neighborhood of KC:
     = f.text_field :neighborhood
   %p
-    Ruby User Since:
+    Ruby Member Since:
     = f.date_select :ruby_since
   %p
     About:

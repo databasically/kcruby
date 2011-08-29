@@ -1,0 +1,20 @@
+- @title =  "Members"
+
+#member
+  %h2
+    Members of the Kansas City Ruby Community
+  - @members.each do |member|
+    .member
+      %img{:src => "#{member.avatar}", :height => "40"}
+      = member.name
+      -if member.show_email
+        =link_to("#{member.email}", "mailto:#{member.email}")
+      = "Ruby User Since #{member.ruby_since.strftime("%Y")}"
+      = member.neighborhood
+      = member.available
+      -if current_member
+        -if (current_member.id == member.id) 
+          .member-management{:style => "float:right;"}
+            = link_to 'Edit', edit_member_path(member)
+            = link_to 'Destroy', member, :confirm => 'Are you sure?', :method => :delete
+      %iframe{:allowtransparency => "true", :frameborder => "0", :scrolling => "no", :src => "http://platform.twitter.com/widgets/follow_button.html?screen_name=#{member.twitter_user_id}&show_count=false", :style => "width:200px; height:20px;"}

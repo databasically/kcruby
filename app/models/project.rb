@@ -1,3 +1,3 @@
 class Project < ActiveRecord::Base
-  attr_accessible :title, :description, :user_id, :timestamp, :created
+  attr_accessible :title, :description, :member_id, :timestamp, :created
 end

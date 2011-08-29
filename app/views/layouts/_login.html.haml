@@ -1,11 +1,11 @@
 #login 
   %p
     %h5
-      - if current_user
-        %img{:src => "#{current_user.avatar}", :height => "40"}
-        ="#{current_user.name}"
-        // =link_to "edit", "users/#{current_user.id}/edit"
-        =link_to "edit", edit_user_path(current_user)
+      - if current_member
+        %img{:src => "#{current_member.avatar}", :height => "40"}
+        ="#{current_member.name}"
+        // =link_to "edit", "members/#{current_member.id}/edit"
+        =link_to "edit", edit_member_path(current_member)
         =link_to "logout", logout_path
       - else
         =link_to "login", login_path

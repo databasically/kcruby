@@ -4,14 +4,14 @@
   %tr
     %th Title
     %th Description
-    %th User
+    %th Member
     %th Timestamp
     %th Created
   - for project in @projects
     %tr
       %td= project.title
       %td= project.description
-      %td= project.user_id
+      %td= project.member_id
       %td= project.timestamp
       %td= project.created
       %td= link_to 'Show', project

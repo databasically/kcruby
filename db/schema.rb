@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110819150910) do
+ActiveRecord::Schema.define(:version => 20110826174415) do
 
   create_table "events", :force => true do |t|
     t.string   "name"
@@ -26,6 +26,26 @@ ActiveRecord::Schema.define(:version => 20110819150910) do
     t.string   "venue_zip"
     t.string   "venue_map"
     t.string   "event_url"
+  end
+
+  create_table "members", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.text     "about"
+    t.text     "links"
+    t.string   "avatar"
+    t.string   "token"
+    t.date     "user_since"
+    t.string   "github_user_id"
+    t.string   "twitter_user_id"
+    t.integer  "login_count"
+    t.date     "ruby_since"
+    t.string   "neighborhood"
+    t.boolean  "available"
+    t.boolean  "show_email"
+    t.boolean  "email_reminders"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "podcasts", :force => true do |t|
@@ -50,26 +70,6 @@ ActiveRecord::Schema.define(:version => 20110819150910) do
     t.integer  "user_id"
     t.date     "timestamp"
     t.date     "created"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "users", :force => true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.text     "about"
-    t.text     "links"
-    t.string   "avatar"
-    t.string   "token"
-    t.date     "user_since"
-    t.string   "github_user_id"
-    t.string   "twitter_user_id"
-    t.integer  "login_count"
-    t.date     "ruby_since"
-    t.string   "neighborhood"
-    t.boolean  "available"
-    t.boolean  "show_email"
-    t.boolean  "email_reminders"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
