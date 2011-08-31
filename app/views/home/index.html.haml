@@ -1,7 +1,8 @@
-- @title = "Kansas City's Ruby Community"
+// - @title = "Kansas City's Ruby Community"
 
-%table
-  %tr
-    %td Share ideas, code, and your love for Ruby. Show off your latest project, gems and plugins, or something you learned. Open to all skill levels… just show up and join the fun!
-  %tr
-    =render :partial => "layouts/podcast"  
+.twitter_feed
+  =render :partial => "layouts/twitter"
+.content
+  #introduction
+    Share ideas, code, and your love for Ruby. Show off your latest project, gems and plugins, or something you learned. Open to all skill levels… just show up and join the fun!
+  =render :partial => "layouts/podcast"  

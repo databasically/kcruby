@@ -15,9 +15,11 @@
 
   %body
     = render :partial => "layouts/login"
-    = render :partial => "layouts/header"
-
-    #page
-      = yield
-      
-    =render :partial => "layouts/footer"
+    #page_container
+      #page_box
+        = render :partial => "layouts/header"
+        #page
+          #title
+            ="#{@title}"
+          = yield
+        =render :partial => "layouts/footer"

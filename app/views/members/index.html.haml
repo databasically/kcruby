@@ -1,8 +1,6 @@
-- @title =  "Members"
+- @title =  "Members of the KC Ruby Community"
 
 #member
-  %h2
-    Members of the Kansas City Ruby Community
   - @members.each do |member|
     .member
       %img{:src => "#{member.avatar}", :height => "40", :width => "40"}

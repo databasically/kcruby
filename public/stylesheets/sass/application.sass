@@ -1,4 +1,7 @@
-$primary_color: #FFFFFF
+$primary_color: #FFFFFF // WHITE
+$far_background_color: #99CCFF // LIGHT BLUE
+$secondary_color: #000099 // DARK BLUE
+
 
 @import "_header"
 @import "_navbar"
@@ -10,42 +13,53 @@ body
   margin: 0px 0px 0px 0px
   padding: 0px 0px 0px 0px
   width: 100%
-  background-color: $primary_color
+  position: relative
+  background-color: $far_background_color
   font:
     family: Monaco, Courier, Lucida Console, Courier, monospace
     size: 100%
+  #title
+    font-size: 135%
+    text-align: center
+  #page_container
+    margin: 20px auto
+    width: 1000px
+  #page_box
+    margin: 0px 40px 0px 40px
+    width: 960px
+    background-color: $primary_color
+    border-radius: 5px 5px 5px 5px
   #page
-    margin: 110px 0px 50px 50px
-    width: 900px
+    margin: 0px 0px 0px 0px
+    padding: 20px 20px 20px 20px
+    width: 920px
+    overflow: hidden
+    .twitter_feed
+      margin: 10px 10px 10px 10px
+      float: left
+      width: 300px
+      height: 400px
+      background-color: $secondary_color
+      border-radius: 10px 10px 10px 10px
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)
     .member
+      float: left
       border: 1px solid green
       iframe
         float: right
-table
-  caption
-    border-bottom: 1px dashed #b1ad9b
-  width: 900px
-  margin: 10px 0px 0px 0px
-  padding: 0px 0px 0px 0px
-
-  a
-    color: #3f0e0d
-  a:hover
-    color: #0000CC
-  h1,
-  h2,
-  h3,
-  h4
-    text-align: center
-    vertical-align: top
-    padding: 0px 0px 0px 0px
-    margin: 0
-  h3
-    text-align: left  
-  h5
-    text-align: left
-    padding: 10px 0px 0px 20px
-    margin: 0   
+    .content
+      float: right
+      margin: 10px 10px 10px 10px
+      padding: 0
+      width: 575px
+      .podcast
+        text-align: center
+        #video
+          margin: 0px auto
+ul
+  list-style-type: none
+  padding: 0
+  margin: 0
 a
   color: #3f0e0d
 a:hover
@@ -102,3 +116,9 @@ iframe
     margin: 8px 10px
   ul
     margin: 0
+.dashed_bar
+  margin: 0px 0px 0px 0px
+  border-bottom: 1px dashed #b1ad9b
+  position: absolute
+  width: 960px
+  height: 1px
