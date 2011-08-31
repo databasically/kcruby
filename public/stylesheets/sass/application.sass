@@ -43,19 +43,80 @@ body
       border-radius: 10px 10px 10px 10px
       box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)
     .member
-      float: left
-      border: 1px solid green
+      position: relative
+      float: right
+      margin: 5px 0px 5px 0px
+      padding: 5px 5px 5px 5px
+      border-radius: 5px 5px 5px 5px
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)
+      width: 575px
       iframe
         float: right
+      .member-management
+        position: absolute
+        right: 20px
+        top: 35px
+        text-align: right
+        font-size: 75%
+      #avatar
+        float: left
+      #information
+        width: 400px
+        margin: 0px 70px
+        #name
+          text-align: left
+          font-size: 125% 
+        #user_since,
+        #e-mail,
+        #neighborhood,
+          text-align: left
+          p
+            margin: 0
     .content
       float: right
       margin: 10px 10px 10px 10px
       padding: 0
       width: 575px
-      .podcast
-        text-align: center
-        #video
-          margin: 0px auto
+      #introduction
+        border-radius: 5px 5px 5px 5px
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)
+        padding: 20px 20px 20px 20px
+      #podcast_box
+        margin: 40px 0 0 0
+        border-radius: 5px 5px 5px 5px
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)
+        padding: 0 0 0 0
+        background-color: $far_background_color
+        #title
+          margin: 0 0 0 0
+          padding: 20px 0 0 0
+          text-size: 120%
+          text-align: center
+        .podcast
+          #podcast_item
+            padding: 0px 0 0 0
+            height: 300px
+            border: none
+            box-shadow: none
+            border-radius: none
+            #video
+              margin: 0px auto
+              float: none
+            .information
+              margin: 20px auto
+              float: none
+              width: 550px
+              text-align: center
+              #title
+                font-size: 80%
+              #duration
+                font-size: 70%
+                display: inline
+                padding: 0 10px 0 0
+              #upload_date
+                font-size: 70%
+                display: inline
+                padding: 0 0 0 10px
 ul
   list-style-type: none
   padding: 0

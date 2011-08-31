@@ -1,18 +1,29 @@
 - @title =  "Members of the KC Ruby Community"
 
 #member
+  .twitter_feed
+    =render :partial => "layouts/twitter"
   - @members.each do |member|
     .member
-      %img{:src => "#{member.avatar}", :height => "40", :width => "40"}
-      = member.name
-      -if member.show_email
-        =link_to("#{member.email}", "mailto:#{member.email}")
-      = "Ruby User Since #{member.ruby_since.strftime("%Y")}"
-      = member.neighborhood
-      = member.available
+      #avatar
+        %img{:src => "#{member.avatar}", :height => "40", :width => "40"}
+      %iframe{:allowtransparency => "true", :frameborder => "0", :scrolling => "no", :src => "http://platform.twitter.com/widgets/follow_button.html?screen_name=#{member.twitter_user_id}&show_count=false", :style => "width:160px; height:20px;"}  
       -if current_member
         -if (current_member.id == member.id) 
-          .member-management{:style => "float:right;"}
+          .member-management
             = link_to 'Edit', edit_member_path(member)
-            = link_to 'Destroy', member, :confirm => 'Are you sure?', :method => :delete
-      %iframe{:allowtransparency => "true", :frameborder => "0", :scrolling => "no", :src => "http://platform.twitter.com/widgets/follow_button.html?screen_name=#{member.twitter_user_id}&show_count=false", :style => "width:200px; height:20px;"}
+            = link_to 'Delete', member, :confirm => 'Are you sure?', :method => :delete
+      #information
+        #name
+          = member.name
+        #user_since
+          %p
+            Ruby User Since:
+            = member.ruby_since.strftime("%Y")
+        #neighborhood
+          %p
+            Neighborhood:
+            = member.neighborhood
+        -if member.show_email
+          #e-mail
+            =link_to("#{member.email}", "mailto:#{member.email}")

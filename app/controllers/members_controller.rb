@@ -1,6 +1,6 @@
 class MembersController < ApplicationController
   def index
-    @members = Member.all
+    @members = Member.find(:all, :order => 'name')
   end
 
   def show
@@ -27,7 +27,7 @@ class MembersController < ApplicationController
   def update
     @member = Member.find(params[:id])
     if @member.update_attributes(params[:member])
-      redirect_to @member, :notice  => "Successfully updated member."
+      redirect_to members_url, :notice  => "Successfully updated member."
     else
       render :action => 'edit'
     end
