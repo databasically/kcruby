@@ -33,9 +33,7 @@ gem 'haml'
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
 
-group :production do
-  gem 'pg'
-end
+gem 'pg', :group => :production
 
 group :development, :test do
     #   gem 'webrat'
