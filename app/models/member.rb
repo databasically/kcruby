@@ -1,5 +1,5 @@
 class Member < ActiveRecord::Base
-  attr_accessible :name, :email, :about, :links, :avatar, :token, :member_since, :github_user_id, :twitter_user_id, :login_count, :ruby_since, :neighborhood, :available, :show_email, :email_reminders
+  attr_accessible :name, :email, :about, :links, :avatar, :token, :member_since, :github_user_id, :twitter_user_id, :login_count, :ruby_since, :neighborhood, :available, :show_email, :email_reminders, :admin
 
 
   def self.find_or_create_by_auth(auth_data)
@@ -10,6 +10,7 @@ class Member < ActiveRecord::Base
       member.avatar = auth_data["user_info"]["image"]
       member.save
     end
+    member.login_count =+ 1
     return member
   end
 

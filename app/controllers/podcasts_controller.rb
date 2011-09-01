@@ -1,4 +1,9 @@
 class PodcastsController < ApplicationController
+  def check
+    Podcast.get_videos
+    redirect_to podcasts_url, :notice => "Successfully checked for new podcast."
+  end
+
   def index
     @podcasts = Podcast.public.desc
   end
@@ -14,7 +19,7 @@ class PodcastsController < ApplicationController
   def create
     @podcast = Podcast.new(params[:podcast])
     if @podcast.save
-      redirect_to @podcast, :notice => "Successfully created podcast."
+      redirect_to podcasts_url, :notice => "Successfully created podcast."
     else
       render :action => 'new'
     end
@@ -27,7 +32,7 @@ class PodcastsController < ApplicationController
   def update
     @podcast = Podcast.find(params[:id])
     if @podcast.update_attributes(params[:podcast])
-      redirect_to @podcast, :notice  => "Successfully updated podcast."
+      redirect_to podcasts_url, :notice  => "Successfully updated podcast."
     else
       render :action => 'edit'
     end

@@ -1,5 +1,11 @@
 = form_for @podcast do |f|
   = f.error_messages
+  = link_to "Delete", @podcast, :confirm => 'Are you sure?', :method => :delete
+  = f.submit
+  %p
+    = f.label :private_video
+    %br
+    = f.check_box :private_video
   %p
     = f.label :title
     %br
@@ -9,6 +15,10 @@
     %br
     = f.text_area :description
   %p
+    = f.label :upload_date
+    %br
+    = f.date_select :upload_date
+  %p
     = f.label :video_url
     %br
     = f.text_field :video_url
@@ -17,32 +27,10 @@
     %br
     = f.text_field :thumbnail_medium
   %p
-    = f.label :size
-    %br
-    = f.text_field :size
-  %p
-    = f.label :duration
-    %br
-    = f.text_field :duration
-  %p
-    = f.label :upload_date
-    %br
-    = f.date_select :upload_date
-  %p
     = f.label :thumbnail_large
     %br
     = f.text_field :thumbnail_large
   %p
-    = f.label :width
+    = f.label :duration
     %br
-    = f.text_field :width
-  %p
-    = f.label :height
-    %br
-    = f.text_field :height
-  %p
-    = f.label :private_video
-    %br
-    = f.check_box :private_video
-  %p
-    = f.submit
+    = f.text_field :duration  

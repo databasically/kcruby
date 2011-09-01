@@ -11,7 +11,7 @@ class Event < ActiveRecord::Base
     JSON.parse(response)["results"].each do |ev|
       Event.find_or_create_by_id(ev["id"]).update_attributes(
         :id             => ev["id"],
-        :name          => ev["name"],
+        :name           => ev["name"],
         :time           => ev["time"],
         :venue_name     => ev["venue_name"],
         :description    => ev["description"],

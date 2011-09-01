@@ -2,11 +2,18 @@
   %ul
     - for podcast in @podcasts
       %li#podcast_item
+        -if current_member
+          -if (current_member.admin)
+            .podcast_management
+              = link_to 'Edit', edit_podcast_path(podcast)
         #video
           %iframe{:src => "http://player.vimeo.com/video/#{podcast.id}?title=0&byline=0&portrait=0", :width => "320", :height => "180", :frameborder => "0", :alt => "#{podcast.title}"}
         .information
           #title
             = link_to "#{podcast.title}", "#{podcast.video_url}"
+          #description
+            - if podcast.description
+              = "#{podcast.description}"
           #duration
             = "Duration: #{print_duration(podcast.duration)}"
           #upload_date

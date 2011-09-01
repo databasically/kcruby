@@ -8,7 +8,11 @@ Kcruby::Application.routes.draw do
 
   resources :projects
 
-  resources :podcasts
+  resources :podcasts do
+    collection do
+      post 'check'
+    end
+  end
 
   match '/auth/:provider/callback', :to => 'sessions#create'
   
@@ -16,7 +20,7 @@ Kcruby::Application.routes.draw do
   
   match "/login" => redirect("/auth/twitter"), :as => :login
   match "/logout" => "sessions#destroy", :as => :logout
-
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
