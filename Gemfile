@@ -35,8 +35,8 @@ gem 'haml'
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
  group :development, :test do
-#   gem 'webrat'
-gem 'nifty-generators'
+    #   gem 'webrat'
+    gem 'nifty-generators'
 
  end
 gem "mocha", :group => :test

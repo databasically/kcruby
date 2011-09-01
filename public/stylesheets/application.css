@@ -90,7 +90,8 @@
     margin: 10px auto;
     height: 200px;
     border-radius: 5px 5px 5px 5px;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5); }
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+    background-color: #dddddd; }
     .podcast #podcast_item #video {
       float: left;
       margin: 10px 10px 10px 10px;
@@ -192,6 +193,7 @@ body {
       padding: 5px 5px 5px 5px;
       border-radius: 5px 5px 5px 5px;
       box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+      background-color: #dddddd;
       width: 575px; }
       body #page .member iframe {
         float: right; }
@@ -225,13 +227,14 @@ body {
       body #page .content #introduction {
         border-radius: 5px 5px 5px 5px;
         box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
-        padding: 20px 20px 20px 20px; }
+        padding: 20px 20px 20px 20px;
+        background-color: #dddddd; }
       body #page .content #podcast_box {
         margin: 40px 0 0 0;
         border-radius: 5px 5px 5px 5px;
         box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
         padding: 0 0 0 0;
-        background-color: #99ccff; }
+        background-color: #dddddd; }
         body #page .content #podcast_box #title {
           margin: 0 0 0 0;
           padding: 20px 0 0 0;

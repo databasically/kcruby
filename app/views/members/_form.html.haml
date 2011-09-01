@@ -16,7 +16,7 @@
     = f.text_field :neighborhood
   %p
     Ruby Member Since:
-    = f.date_select :ruby_since
+    = f.date_select :ruby_since, :discard_day => true, :discard_month => true, :start_year => 1995, :end_year => Time.now.year
   %p
     About:
     = f.text_area :about
