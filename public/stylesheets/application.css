@@ -219,6 +219,23 @@ body {
           body #page .member #information #e-mail p,
           body #page .member #information #neighborhood p {
             margin: 0; }
+    body #page #edit .member {
+      float: none;
+      margin: 0px auto; }
+      body #page #edit .member #form #avatar {
+        display: inline; }
+      body #page #edit .member #form #title {
+        display: inline;
+        vertical-align: 50%; }
+      body #page #edit .member #form #name,
+      body #page #edit .member #form #ruby_since {
+        font-size: 90%;
+        display: inline; }
+      body #page #edit .member #form #e-mail,
+      body #page #edit .member #form #show,
+      body #page #edit .member #form #neighborhood {
+        display: inline;
+        font-size: 90%; }
     body #page .content {
       float: right;
       margin: 10px 10px 10px 10px;
@@ -230,6 +247,7 @@ body {
         padding: 20px 20px 20px 20px;
         background-color: #dddddd; }
       body #page .content #podcast_box {
+        position: relative;
         margin: 40px 0 0 0;
         border-radius: 5px 5px 5px 5px;
         box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
@@ -241,6 +259,7 @@ body {
           text-size: 120%;
           text-align: center; }
         body #page .content #podcast_box .podcast #podcast_item {
+          position: static;
           padding: 0px 0 0 0;
           height: 300px;
           border: none;
