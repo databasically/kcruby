@@ -8,6 +8,7 @@ class SessionsController < ApplicationController
     rescue
       session[:member_id] = nil
       redirect_to root_path, :notice => "Login Failure"
+    end
   end
   
   def destroy
