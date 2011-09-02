@@ -6,7 +6,7 @@ class Member < ActiveRecord::Base
     member = self.find_or_create_by_id(auth_data["uid"])
     if member.name != auth_data["user_info"]["name"]
       member.name = auth_data["user_info"]["name"]
-      member.twitter_member_id = auth_data["user_info"]["nickname"]
+      member.twitter_user_id = auth_data["user_info"]["nickname"]
       member.avatar = auth_data["user_info"]["image"]
       member.save
     end
