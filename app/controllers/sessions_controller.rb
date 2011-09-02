@@ -9,6 +9,7 @@ class SessionsController < ApplicationController
     rescue Exception => ex
       logger.warn "Session#create exception: #{ex.inspect}"
     end
+  end
   
   def destroy
     session[:member_id] = nil
