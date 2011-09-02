@@ -15,7 +15,9 @@ class Member < ActiveRecord::Base
   end
 
 
-
+  def optional_ruby_since
+    self.ruby_since.blank? ? "" : self.ruby_since.strftime("%Y")    
+  end
 
 
 end
