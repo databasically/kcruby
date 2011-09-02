@@ -1,23 +1,24 @@
 #header
   %h1
     %a{:href => "/"} KC Ruby
-  .event
-    - @next = Event.next
-    #leadin
-      Our next event:
-    %br
-    %ul
-      #title
-        %li
-          %a{:href => "#{@next.event_url}"}
-            = "#{@next.name}"
-      #location
-        %li
-          %a{:href => "#{@next.venue_map}"}
-            = "#{@next.venue_name}"
-      #date
-        %li
-          = "#{@next.time.strftime("%A %b %d, %Y")} @ #{@next.time.strftime("%I:%M %p")}"
+  -if Event.next
+    .event
+      - @next = Event.next
+      #leadin
+        Our next event:
+      %br
+      %ul
+        #title
+          %li
+            %a{:href => "#{@next.event_url}"}
+              = "#{@next.name}"
+        #location
+          %li
+            %a{:href => "#{@next.venue_map}"}
+              = "#{@next.venue_name}"
+        #date
+          %li
+            = "#{@next.time.strftime("%A %b %d, %Y")} @ #{@next.time.strftime("%I:%M %p")}"
 
   / %h3
   /   %a{:href => "#{podcasts_url}"} Latest Podcast

@@ -1,6 +1,9 @@
 class Member < ActiveRecord::Base
-  attr_accessible :name, :email, :about, :links, :avatar, :token, :member_since, :github_user_id, :twitter_user_id, :login_count, :ruby_since, :neighborhood, :available, :show_email, :email_reminders, :admin
+  attr_accessible :member_id, :name, :email, :about, :links, :avatar, :token, :member_since, :github_user_id, :twitter_user_id, :login_count, :ruby_since, :neighborhood, :available, :show_email, :email_reminders, :admin
 
+  # validates :name => true
+  # 
+  # has_many :projects
 
   def self.find_or_create_by_auth(auth_data)
     member = self.find_or_create_by_id(auth_data["uid"])

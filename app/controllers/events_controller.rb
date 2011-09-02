@@ -38,4 +38,9 @@ class EventsController < ApplicationController
     @event.destroy
     redirect_to events_url, :notice => "Successfully destroyed event."
   end
+  
+  def check
+    Event.get_meetup
+    redirect_to root_url, :notice => "Successfully checked for new events."
+  end
 end

@@ -3,6 +3,13 @@
 .twitter_feed
   =render :partial => "layouts/twitter"
 .content
+  -if (current_member)
+    -if (current_member.admin)
+      %ul#buttons
+        %li#event
+          = button_to "Check for Events", check_events_path
+        %li#podcast
+          = button_to "Check for Podcasts", check_podcasts_path
   #introduction
     Share ideas, code, and your love for Ruby. Show off your latest project, gems and plugins, or something you learned. Open to all skill levels… just show up and join the fun!
   #podcast_box

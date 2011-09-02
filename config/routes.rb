@@ -1,6 +1,10 @@
 Kcruby::Application.routes.draw do
 
-  resources :events
+  resources :events do
+    collection do
+      post 'check'
+    end
+  end
 
   resources :home
   
@@ -13,7 +17,7 @@ Kcruby::Application.routes.draw do
       post 'check'
     end
   end
-
+  
   match '/auth/:provider/callback', :to => 'sessions#create'
   match '/auth/failure', :to => 'sessions#fail'
   
