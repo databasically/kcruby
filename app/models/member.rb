@@ -11,7 +11,7 @@ class Member < ActiveRecord::Base
       member.avatar = auth_data["user_info"]["image"]
       member.save
     end
-    member.login_count =+ 1
+    member.login_count += 1
     member.save
     return member
    end

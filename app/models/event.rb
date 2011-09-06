@@ -1,7 +1,7 @@
 class Event < ActiveRecord::Base
   attr_accessible :name, :event_url, :description, :time, :venue_name, :venue_address1, :venue_address2, :venue_city, :venue_state, :venue_zip, :venue_map
   
-  validates_presence_of :name, :event_url, :time => true
+  # validates_presence_of :name, :event_url, :time => true
   
   def self.next
     Event.first(:conditions => ["time >= ?",Time.now], :order => "time") || Event.last(:order => "time")
