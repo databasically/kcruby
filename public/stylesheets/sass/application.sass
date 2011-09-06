@@ -17,7 +17,7 @@ body
   position: relative
   background-color: $far_background_color
   font:
-    family: Monaco, Lucida Console, monospace
+    family: Monaco, Helvetica, monospace
     size: 100%
   #title
     font-size: 135%
@@ -47,33 +47,46 @@ body
       position: relative
       float: right
       margin: 5px 0px 5px 0px
-      padding: 5px 5px 5px 5px
+      padding: 0px 0px 0px 0px
       border-radius: 5px 5px 5px 5px
       box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)
-      background-color: $background_color
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)
+      background-color: transparent
+      border-width: 5px 1px 10px 1px
+      border-style: solid
+      border-color: $secondary_color
+      .log-bar
+        height: 45px
+        z-index: auto
+        box-shadow: none
       width: 575px
       iframe
         float: right
       .member-management
         position: absolute
         right: 20px
-        top: 35px
+        top: 50px
         text-align: right
         font-size: 75%
       #avatar
+        margin: 0px 0px 0px 10px
         float: left
-      #information
+        zindex: 5
+      #name
+        margin: 5px 0px 0px 20px
+        float: left
+        text-align: left
+        font-size: 125%
+        color: $primary_color
+      .information
         width: 400px
-        margin: 0px 70px
-        #name
-          text-align: left
-          font-size: 125% 
+        margin: 55px 0px 5px 70px
         #user_since,
         #e-mail,
         #neighborhood,
           text-align: left
           p
-            margin: 0
+            margin: auto
     #edit
       .member
         float: none
@@ -106,30 +119,37 @@ body
           display: inline-block
       #introduction
         text-align: justify
+        border-width: 1px 1px 1px 1px
+        border-style: solid
+        border-color: $secondary_color
         border-radius: 5px 5px 5px 5px
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5)
         padding: 20px 20px 20px 20px
-        background-color: $background_color
+        background-color: $primary_color
       #podcast_box
         position: relative
         margin: 40px 0 0 0
         border-radius: 5px 5px 5px 5px
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5)
         padding: 0 0 0 0
-        background-color: $background_color
+        border: 1px solid $secondary_color
         #title
           margin: 0 0 0 0
-          padding: 20px 0 0 0
+          padding: 10px 0 10px 0
           text-size: 120%
           text-align: center
+          background-color: $secondary_color
+          color: $primary_color
+          border-radius: 4px 4px 0px 0px
         .podcast
           #podcast_item
-            position: static
             padding: 0px 0 0 0
             height: 300px
             border: none
             box-shadow: none
             border-radius: none
+            .log-bar
+              height: 0px
             #video
               margin: 0px auto
               float: none
@@ -138,16 +158,20 @@ body
               float: none
               width: 550px
               text-align: center
+              background-color: $primary_color
               #title
                 font-size: 80%
+                background-color: $primary_color
               #duration
                 font-size: 70%
                 display: inline
                 padding: 0 10px 0 0
+                background-color: $primary_color
               #upload_date
                 font-size: 70%
                 display: inline
                 padding: 0 0 0 10px
+                background-color: $primary_color
 ul
   list-style-type: none
   padding: 0
@@ -214,3 +238,11 @@ iframe
   position: absolute
   width: 960px
   height: 1px
+.log-bar
+  background-color: $secondary_color
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)
+  width: 100%
+  height: 44px
+  Position: absolute
+  Top: 0px
+  z-index: -100

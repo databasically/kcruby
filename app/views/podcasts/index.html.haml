@@ -3,5 +3,7 @@
 #body
   -if (current_member)
     -if (current_member.admin)
-      = button_to "Check for Podcast", check_podcasts_path
+      #buttons
+        #podcast
+          = button_to "Check for Podcast", check_podcasts_path
   =render :partial => "layouts/podcast"

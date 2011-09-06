@@ -8,9 +8,9 @@ Kcruby::Application.routes.draw do
 
   resources :home
   
-  resources :members
-
-  resources :projects
+  resources :members do
+    resources :projects
+  end
 
   resources :podcasts do
     collection do

@@ -8,23 +8,6 @@ class PodcastsController < ApplicationController
     @podcasts = Podcast.public.desc
   end
 
-  def show
-    @podcast = Podcast.find(params[:id])
-  end
-
-  def new
-    @podcast = Podcast.new
-  end
-
-  def create
-    @podcast = Podcast.new(params[:podcast])
-    if @podcast.save
-      redirect_to podcasts_url, :notice => "Successfully created podcast."
-    else
-      render :action => 'new'
-    end
-  end
-
   def edit
     @podcast = Podcast.find(params[:id])
   end
@@ -41,6 +24,6 @@ class PodcastsController < ApplicationController
   def destroy
     @podcast = Podcast.find(params[:id])
     @podcast.destroy
-    redirect_to podcasts_url, :notice => "Successfully destroyed podcast."
+    redirect_to podcasts_url, :notice => "Successfully deleted podcast."
   end
 end

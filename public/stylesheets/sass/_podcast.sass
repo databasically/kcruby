@@ -4,13 +4,20 @@
   #podcast_item
     position: relative
     margin: 10px auto
-    height: 200px
+    height: 210px
     border-radius: 5px 5px 5px 5px
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)
-    background-color: $background_color
+    background-color: transparent
+    border-width: 10px 1px 1px 1px
+    border-style: solid
+    border-color: $secondary_color
+    .log-bar
+      height: 20px
+      z-index: auto
+      box-shadow: none
     #video
       float: left
-      margin: 10px 10px 10px 10px
+      margin: 25px 10px 10px 10px
       height: 180px
       width: 320px
       box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)
@@ -35,6 +42,6 @@
     .podcast_management
       position: absolute
       right: 20px
-      top: 10px
+      top: 20px
       text-align: right
       font-size: 75%

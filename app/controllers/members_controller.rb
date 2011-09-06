@@ -36,6 +36,6 @@ class MembersController < ApplicationController
   def destroy
     @member = Member.find(params[:id])
     @member.destroy
-    redirect_to members_url, :notice => "Successfully destroyed member."
+    redirect_to members_url, :notice => "Successfully deleted member."
   end
 end

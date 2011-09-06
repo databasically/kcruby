@@ -2,6 +2,7 @@
   %ul
     - for podcast in @podcasts
       %li#podcast_item
+        .log-bar
         -if current_member
           -if (current_member.admin)
             .podcast_management
@@ -13,7 +14,7 @@
             = link_to "#{podcast.title}", "#{podcast.video_url}"
           #description
             - if podcast.description
-              = "#{podcast.description}"
+              != "#{podcast.description.html_safe}"
           #duration
             = "Duration: #{print_duration(podcast.duration)}"
           #upload_date
