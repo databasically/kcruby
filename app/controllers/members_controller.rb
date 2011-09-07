@@ -33,7 +33,8 @@ class MembersController < ApplicationController
     end
   end
 
-  def destroy
+  def destroy    
+    session[:member_id] = nil unless current_member.admin
     @member = Member.find(params[:id])
     @member.destroy
     redirect_to members_url, :notice => "Successfully deleted member"

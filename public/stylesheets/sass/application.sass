@@ -50,8 +50,6 @@ body
       padding: 0px 0px 0px 0px
       border-radius: 5px 5px 5px 5px
       box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)
-      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)
-      background-color: transparent
       border-width: 5px 1px 1px 1px
       border-style: solid
       border-color: $secondary_color
@@ -72,7 +70,7 @@ body
         margin: 0px 0px 0px 10px
         float: left
         zindex: 5
-      #name
+      #title
         margin: 5px 0px 0px 20px
         float: left
         text-align: left
@@ -91,21 +89,45 @@ body
       .member
         float: none
         margin: 0px auto
-        #form
-          #avatar
-            display: inline
-          #title
-            display: inline
-            vertical-align: 50%
-          #name,
-          #ruby_since
-            font-size: 90%
-            display: inline
-          #e-mail,
-          #show,
-          #neighborhood
-            display: inline
-            font-size: 90%
+        width: 60%
+        background-color: transparent
+        padding: 0px 0px 0px 0px
+        border-radius: 5px 5px 5px 5px
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)
+        border-width: 60px 1px 1px 1px
+        border-style: solid
+        border-color: $secondary_color
+        #form-box
+          padding: 0px 0px 0px 0px
+          margin: 0px 0px 0px 10px
+          #title-bar
+            position: absolute
+            top: -55px
+            width: 90%
+            height: 50px
+            margin: 0px 0px 0px -5px
+            #avatar
+              margin: 0px 0px 0px 0px
+              float: left
+            #title
+              margin: 10px 0px 0px 45px
+          #information
+            width: 100%
+            margin: 10px 0px 0px 0px
+            #block
+              display: block
+            #name,
+            #ruby_since,
+            #e-mail,
+            #show,
+            #neighborhood
+              font-size: 90%
+              display: inline
+          #buttons
+            width: 90%          
+            margin: 10px auto
+            align: center
+            text-align: center
     .content
       float: right
       margin: 10px 10px 10px 10px
@@ -125,7 +147,6 @@ body
         border-radius: 5px 5px 5px 5px
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5)
         padding: 20px 20px 20px 20px
-        background-color: transparent
       #podcast_box
         margin: 20px 0px 0px 0px
         padding: 0px 0px 0px 0px
@@ -219,10 +240,10 @@ iframe
   display: inline
 
 .error_messages
-  width: 400px
   border: 2px solid #cf0000
   padding: 0
   padding-bottom: 12px
+  margin-left: -10px
   margin-bottom: 20px
   background-color: #f0f0f0
   font:
@@ -240,6 +261,8 @@ iframe
     margin: 8px 10px
   ul
     margin: 0
+    li
+      margin: 0 0 0 30px
 .dashed_bar
   margin: 0px 0px 0px 0px
   border-bottom: 1px dashed #b1ad9b

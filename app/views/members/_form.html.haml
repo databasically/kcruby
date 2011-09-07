@@ -1,26 +1,29 @@
-= form_for @member do |f|
-  = f.error_messages
-  #avatar
-  %img{:src => "#{@member.avatar}"}
-  #title
-    = "#{@member.name} (#{@member.twitter_user_id})"
-  %br/
-  #name
-    Name:
-    =f.text_field :name
-  #ruby_since
-    Ruby Member Since:
-    = f.date_select :ruby_since, :discard_day => true, :discard_month => true, :start_year => 1995, :end_year => Time.now.year
-  %br/  
-  #e-mail
-    E-mail:
-    = f.text_field :email
-  #show
-    Show E-mail on Website?
-    = f.check_box :show_email
-  %br/
-  #neighborhood
-    Neighborhood of KC:
-    = f.text_field :neighborhood
-  %p
-    = f.submit
+#form-box
+  = form_for @member do |f|
+    = f.error_messages
+    #title-bar
+      #avatar
+        %img{:src => "#{@member.avatar}"}
+      #title
+        = "#{@member.name} (#{@member.twitter_user_id})"
+    #information
+      #block
+        #name
+          Name:
+          =f.text_field :name
+        #ruby_since
+          Ruby Member Since:
+          = f.date_select :ruby_since, :discard_day => true, :discard_month => true, :start_year => 1995, :end_year => Time.now.year
+      #block
+        #e-mail
+          E-mail:
+          = f.text_field :email
+        #show
+          Show E-mail on Website?
+          = f.check_box :show_email
+      #block
+      #neighborhood
+        Neighborhood of KC:
+        = f.text_field :neighborhood
+    #buttons
+      = f.submit
