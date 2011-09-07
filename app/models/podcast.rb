@@ -7,20 +7,20 @@ class Podcast < ActiveRecord::Base
     u = URI.parse("http://vimeo.com/api/v2/wesgarrison/videos.json")
     response = Net::HTTP.get(u)
     JSON.parse(response).each do |pc|
-      @podcast = Podcast.find_or_create_by_id(pc["id"])
-      @podcast.id                                 = pc["id"]
-      if @podcast.title.blank?
-        @podcast.title = pc["title"]
-        @podcast.description      = pc["description"]
-        @podcast.video_url        = pc["url"]
-        @podcast.thumbnail_medium = pc["thumbnail_medium"]
-        @podcast.thumbnail_large  = pc["thumbnail_large"]
-        @podcast.upload_date      = pc["upload_date"]
-        @podcast.duration         = pc["duration"]
-        @podcast.width            = pc["width"]
-        @podcast.height           = pc["height"]
+      podcast = Podcast.find_or_create_by_id(pc["id"])
+      podcast.id                                 = pc["id"]
+      if podcast.title.blank?
+        podcast.title = pc["title"]
+        podcast.description      = pc["description"]
+        podcast.video_url        = pc["url"]
+        podcast.thumbnail_medium = pc["thumbnail_medium"]
+        podcast.thumbnail_large  = pc["thumbnail_large"]
+        podcast.upload_date      = pc["upload_date"]
+        podcast.duration         = pc["duration"]
+        podcast.width            = pc["width"]
+        podcast.height           = pc["height"]
       end
-      @podcast.save
+      podcast.save
     end
   end
 

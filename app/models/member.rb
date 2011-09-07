@@ -9,9 +9,9 @@ class Member < ActiveRecord::Base
       member.name = auth_data["user_info"]["name"]
       member.twitter_user_id = auth_data["user_info"]["nickname"]
       member.avatar = auth_data["user_info"]["image"]
-      member.save
     end
-    member.login_count += 1 || member.login_count = 1 if member.login_count.blank?
+    member.login_count = 0 if member.login_count.blank?
+    member.login_count+=1
     member.save
     return member
   end
