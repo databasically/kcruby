@@ -4,7 +4,7 @@ class Event < ActiveRecord::Base
   # validates_presence_of :name, :event_url, :time => true
   
   def self.next
-    Event.first(:conditions => ["time >= ?",Time.now], :order => "time") || Event.last(:order => "time")
+    Event.first(:conditions => ["time >= ?",Time.now], :order => "time")
   end
   
   def self.get_meetup

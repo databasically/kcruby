@@ -14,7 +14,7 @@ class MembersController < ApplicationController
   def create
     @member = Member.new(params[:member])
     if @member.save
-      redirect_to @member, :notice => "Successfully created member."
+      redirect_to @member, :notice => "Successfully created member"
     else
       render :action => 'new'
     end
@@ -27,7 +27,7 @@ class MembersController < ApplicationController
   def update
     @member = Member.find(params[:id])
     if @member.update_attributes(params[:member])
-      redirect_to members_url, :notice  => "Successfully updated member."
+      redirect_to members_url, :notice  => "Successfully updated member"
     else
       render :action => 'edit'
     end
@@ -36,6 +36,6 @@ class MembersController < ApplicationController
   def destroy
     @member = Member.find(params[:id])
     @member.destroy
-    redirect_to members_url, :notice => "Successfully deleted member."
+    redirect_to members_url, :notice => "Successfully deleted member"
   end
 end
