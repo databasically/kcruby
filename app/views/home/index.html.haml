@@ -13,6 +13,25 @@
   #introduction
     Share ideas, code, and your love for Ruby. Show off your latest project, gems and plugins, or something you learned. Open to all skill levels… just show up and join the fun!
   #podcast_box
-    #title
+    #main_title
       The Latest Podcast
-    =render :partial => "layouts/podcast"  
+    %ul.podcast
+      - for podcast in @podcasts
+        %li#podcast_item
+          -if current_member
+            -if (current_member.admin)
+              .podcast_management
+                = link_to 'Edit', edit_podcast_path(podcast)
+          #center_box
+            #video
+              %iframe{:src => "http://player.vimeo.com/video/#{podcast.id}?title=0&byline=0&portrait=0", :width => "320", :height => "180", :frameborder => "0", :alt => "#{podcast.title}"}
+          .information
+            #title
+              = link_to "#{podcast.title}", "#{podcast.video_url}"
+            #description
+              - if podcast.description
+                != "#{podcast.description.html_safe}"
+            #duration
+              = "Duration: #{print_duration(podcast.duration)}"
+            #upload_date
+              = "Upload Date: #{podcast.upload_date.strftime("%b %d, %Y")}" 

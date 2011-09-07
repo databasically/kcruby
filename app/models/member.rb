@@ -14,7 +14,7 @@ class Member < ActiveRecord::Base
     member.login_count += 1 || member.login_count = 1 if member.login_count.blank?
     member.save
     return member
-   end
+  end
 
 
   def optional_ruby_since

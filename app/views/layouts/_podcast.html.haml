@@ -2,7 +2,6 @@
   %ul
     - for podcast in @podcasts
       %li#podcast_item
-        .log-bar
         -if current_member
           -if (current_member.admin)
             .podcast_management
