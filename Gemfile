@@ -39,5 +39,7 @@ group :development, :test do
     #   gem 'webrat'
     gem 'nifty-generators'
     gem 'sqlite3'
+    gem 'heroku'
+    
 end
 gem "mocha", :group => :test
