@@ -2,8 +2,10 @@
 <html>
 <head>
   <title>The page you were looking for doesn't exist (404)</title>
+  <link href='/images/application/favicon.png' rel='shortcut icon'>
+      <link href="/stylesheets/application.css?1315512869" media="screen" rel="stylesheet" type="text/css" />
+      <script src="/javascripts/application.js?1315512869" type="text/javascript"></script>
   <style type="text/css">
-    body { background-color: #fff; color: #666; text-align: center; font-family: arial, sans-serif; }
     div.dialog {
       width: 25em;
       padding: 0 4em;
@@ -18,9 +20,45 @@
 
 <body>
   <!-- This file lives in public/404.html -->
+  <div id='login'>
+    <div class='log-bar'>
+    </div>
+  </div>
+  <div id='page_container'>
+    <div id='page_box'>
+      <div id='header'>
+        <h1>
+          <a href='/'>KC Ruby</a>
+        </h1>
+        <!-- %h3 -->
+        <!-- %a{:href => "#{podcasts_url}"} Latest Podcast -->
+        <div id='nav'>
+          <ul>
+            <li>
+              <a href='/'>KCRuby</a>
+            </li>
+            <li>
+              <a href='/podcasts'>Podcasts</a>
+            </li>
+            <li>
+              <a href='/members'>Members</a>
+            </li>
+            <li>
+              <a href='http://www.meetup.com/kcruby/events/calendar/' target='_new'>Events</a>
+            </li>
+            <li>
+              <a href='http://www.meetup.com/kcruby/messages/archive/' target='_new'>Discussions</a>
+            </li>
+          </ul>
+        </div>
+        <div class='dashed_bar'></div>
+      </div>
   <div class="dialog">
     <h1>The page you were looking for doesn't exist.</h1>
     <p>You may have mistyped the address or the page may have moved.</p>
   </div>
+  <br>
+  <br>
+  <br>
 </body>
 </html>
