@@ -13,7 +13,6 @@ class Event < ActiveRecord::Base
     u = URI.parse("http://api.meetup.com/events.json/?group_urlname=kcruby&amp;key=38a2a70114e565b3c155d919384a12")
     response = Net::HTTP.get(u)
     JSON.parse(response)["results"].each do |ev|
-      # raise ev.inspect
       Event.find_or_create_by_id(ev["id"]).update_attributes(
         :id             => ev["id"],
         :name           => ev["name"],
