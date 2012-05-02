@@ -1,4 +1,6 @@
 class PodcastsController < ApplicationController
+  before_filter :require_login
+  
   def check
     Podcast.get_videos
     redirect_to podcasts_url, :notice => "Successfully checked for new podcast"

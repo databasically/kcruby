@@ -1,4 +1,6 @@
 class EventsController < ApplicationController
+  before_filter :require_login
+  
   def index
     @events = Event.all
   end
