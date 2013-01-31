@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.9'
+gem 'rails', '~>3.0.9'
 # gem 'rails'
 
 # Bundle edge Rails instead:
@@ -39,7 +39,6 @@ group :development, :test do
     #   gem 'webrat'
     gem 'nifty-generators'
     gem 'sqlite3'
-    gem 'heroku'
     
 end
 gem "mocha", :group => :test
