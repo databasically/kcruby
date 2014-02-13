@@ -1,8 +1,8 @@
-The KC Ruby Group website.
+#The KC Ruby Group website.
 
 A pretty, consolidated wrapper for a Meet-up event feed, a twitter list, and a vimeo video channel.
 
-## Setup
+## Local Setup
 
 This website runs on:
 
