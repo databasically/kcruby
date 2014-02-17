@@ -25,6 +25,8 @@ Kcruby::Application.routes.draw do
   
   match "/login" => redirect("/auth/twitter"), :as => :login
   match "/logout" => "sessions#destroy", :as => :logout
+
+  match '/ping' => 'ping#ping'
   
 
   # The priority is based upon order of creation:
