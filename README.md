@@ -52,6 +52,8 @@ bundle exec rails server
 
 ## Vagrant setup
 
+*Vagrant is not required to run this site, but it can be helpful!*
+
 Requires:
 
 * VirtualBox
