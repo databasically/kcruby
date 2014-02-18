@@ -49,3 +49,22 @@ And now you should be ready to go.  Let's start up your app with:
 ````
 bundle exec rails server
 ````
+
+## Vagrant setup
+
+Requires:
+
+* VirtualBox
+* Vagrant
+* Vagrant omnibus installer (vagrant plugin install vagrant-omnibus)
+* Librarian-chef (gem install librarian-chef)
+
+Run:
+
+````
+librarian-chef install
+vagrant up
+vagrant provision
+vagrant ssh
+rails server
+````

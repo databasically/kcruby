@@ -5,3 +5,5 @@ log/*.log
 tmp/
 database.yml
 /config/omniauth.yml
+.vagrant
+cookbooks
